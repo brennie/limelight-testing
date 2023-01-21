@@ -21,14 +21,7 @@ jobs:
           ref: wiki
           fetch-depth: 0
 
-      - name: Setup Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email example@example.com
-          git config --unset-all http.https://github.com/.extraheader
-          git remote add wiki https://${{ secrets.PUSH_CREDENTIALS }}@github.com/brennie/limelight-testing.wiki
-
-          git fetch -a wiki
-      - name: Push to git
-        run: |
-          git push wiki wiki:master
+      - uses: OrlovM/Wiki-Action@v1
+        with:
+          path: '.'
+          token: ${{ secrets.GITHUB_TOKEN }}
