@@ -6,10 +6,9 @@
 
 # Creating a Message
 
-<figure>
+Look at this photograph
+
 [[https://github.com/brennie/limelight-testing/blob/wiki/images/new.png|alt=Creating a New Message]]
-<figcaption>caption</figcaption>
-</figure>
 
 # Previewing a Message
 
